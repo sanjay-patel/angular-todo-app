@@ -1,0 +1,34 @@
+    
+    <div class="col-sm-12 pt-5 text-right">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-primary" (click)="onClickAddTodo()">Add Todo</button>
+        </div>
+    </div>
+    
+    <div class="col-sm-12 pt-2">
+        <div class="col-md-12">
+            <table class="table table-bordered table-hover table-striped">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col" class="text-center">#</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col" class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let todo of todos">
+                        <td class="text-center">{{todo.id}}</td>
+                        <td>{{todo.firstName}}</td>
+                        <td>{{todo.lastName}}</td>
+                        <td>{{todo.email}}</td>
+                        <td width="150" class="text-center">
+                            <button type="button" class="btn btn-info btn-sm mr-2" (click)="onClickEditTodoDetail(todo.id)">Edit</button> 
+                            <button type="button" class="btn btn-danger btn-sm" (click)="onClickTodoDelete(todo.id)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

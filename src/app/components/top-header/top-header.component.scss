@@ -1,0 +1,21 @@
+
+.navbar-light {
+    .navbar-brand {
+        color: #fff;
+    }
+    .navbar-nav {
+        .active {
+            .nav-link {
+                color: #fff;
+            }
+        }
+        .nav-link {
+            color: rgba(255,255,255,.7);
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+

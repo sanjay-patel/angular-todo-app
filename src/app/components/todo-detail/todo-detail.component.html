@@ -1,0 +1,62 @@
+    
+    <div class="col-sm-12 pt-5">
+        <div class="col-md-12">
+            <form id="todoForm" #todoForm="ngForm" (ngSubmit)="onTodoSubmitForm(todoForm);" novalidat>
+                <fieldset class="scheduler-border">
+                    <legend class="scheduler-border">{{mode}} Todo</legend>    
+                    <div class="form-group row">
+                        <label for="firstName" class="col-md-2 col-form-label">First Name</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" #firstName="ngModel" name="firstName" [(ngModel)]="todoDetail.firstName" placeholder="First Name" required>
+                            <div [hidden]="firstName.valid || (firstName.pristine && !todoForm.submitted)" class="text-danger">
+                              First name is required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="middleName" class="col-md-2 col-form-label">Middel Name</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" #middleName="ngModel" name="middleName" [(ngModel)]="todoDetail.middleName" placeholder="Middel Name" required>
+                            <div [hidden]="middleName.valid || (middleName.pristine && !todoForm.submitted)" class="text-danger">
+                              Middle name is required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" #lastName="ngModel" name="lastName" [(ngModel)]="todoDetail.lastName" placeholder="Last Name" required>
+                            <div [hidden]="lastName.valid || (lastName.pristine && !todoForm.submitted)" class="text-danger">
+                              Last name is required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="col-md-2 col-form-label">Email</label>
+                        <div class="col-md-5">
+                            <input type="email" class="form-control" #email="ngModel" name="email" [(ngModel)]="todoDetail.email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                            <div *ngIf="email.invalid && (email.dirty || email.touched || todoForm.submitted)" class="text-danger">
+                                <div *ngIf="email.errors.required"> Email is required. </div>
+                                <div *ngIf="email.errors.pattern"> The email address you have entered is invalid. please try again.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="phone" class="col-md-2 col-form-label">Phone</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" #phone="ngModel" name="phone" [(ngModel)]="todoDetail.phone" placeholder="Phone" required>
+                            <div [hidden]="phone.valid || (phone.pristine && !todoForm.submitted)" class="text-danger">
+                              Phone is required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-7 text-right">
+                            <button type="submit" class="btn btn-primary mr-2">Save</button>
+                            <button type="button" (click)="onClickCancel()" class="btn btn-primary">Cancel</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>

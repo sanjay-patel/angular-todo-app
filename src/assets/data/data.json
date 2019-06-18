@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "salutation": "Mrs",
+        "title": "Er",
+        "firstName": "Melanie",
+        "surname": "Oberhauser",
+        "phone": "1111111111",
+        "email": "m.oberhauser@dvtx.de",
+        "gender": "yes"
+    },
+    {
+        "id": "2",
+        "salutation": "Mrs",
+        "title": "Dr",
+        "firstName": "Melanie",
+        "surname": "Oberhauser",
+        "phone": "2222222222",
+        "email": "m.oberhauser@dvtx.de",
+        "gender": "yes"
+    },
+    {
+        "id": "3",
+        "salutation": "Mrs",
+        "title": "Ph",
+        "firstName": "Melanie",
+        "surname": "Oberhauser",
+        "phone": "3333333333",
+        "email": "m.oberhauser@dvtx.de",
+        "gender": "no"
+    }
+]
